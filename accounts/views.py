@@ -1,9 +1,11 @@
-from django.shortcuts import render,HttpResponseRedirect,HttpResponse
-from django.urls import reverse 
-from django.contrib.auth import authenticate,login ,logout
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import HttpResponse, HttpResponseRedirect, render
+from django.urls import reverse
+
 from .models import Profile
+
 # from .forms import MyUserCreationForm
 
 
