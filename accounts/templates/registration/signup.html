@@ -1,0 +1,29 @@
+<!-- {%  extends 'base.html' %}
+{% block content %}
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+
+    <h1> Login </h1>
+    <br/><br/>
+    {% if not request.user.is_authenticated %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="container">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <!-- </div>  -->
+        {% endfor %}
+        {%endif %}
+        </div>
+            {{ form.as_p }}
+        <input type="submit" value="submit" class="btn btn-secondary">
+    </form>
+    {% endif %}
+
+</div>
+</main>
+{% endblock%} -->

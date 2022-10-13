@@ -1,0 +1,24 @@
+{%  extends 'base.html' %}
+{% block content %}
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+
+<div  class="wrapper content-wrapper p-5">
+
+    <h1> Logout</h1>
+    <br/><br/>
+    {% if request.user.is_authenticated %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p> Are you sure you wnat to logout </p>
+        <input type="submit" value="submit" class="btn btn-secondary">
+    </form>
+    {% else %}
+    <p> You're not logged in . would you like to log out <a href="{% url 'login' %}">logout</a>
+    {% endif %}
+
+</div>
+</div>
+</main>
+{% endblock%}
